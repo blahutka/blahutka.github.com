@@ -1,0 +1,89 @@
+.topbar { height:46px; left:0; overflow:visible; position:fixed; right:0; top:0; z-index:10000; }
+
+.navbar-fixed-top { top:auto; }
+
+.navbar-inner { background:none repeat scroll 0 0 #292929; border-bottom:1px solid #121212; }
+
+.nav.main-nav > li > a { padding:20px 10px; }
+
+.main-nav > li { border-left:1px solid #4A4A4A; border-right:1px solid #292929; }
+
+.main-nav { border-top:1px solid #595959; }
+
+/* float right menu */
+.dropdown-menu.dropdown-user-account { width:365px; margin-top:10px; padding-bottom:0px; }
+
+.dropdown-menu.dropdown-user-account .account-img {
+    background-color:#FEFEFE; border:1px solid #D3D3D3; height:90px; margin:15px 0 0 15px; padding:4px; width:90px;
+    }
+
+.dropdown-menu.dropdown-user-account .account-img-container {
+    float:left; margin-bottom:15px; margin-left:10px; width:86px;
+    }
+
+.dropdown-menu.dropdown-user-account .account-info {
+    float:left; margin-bottom:15px; padding-left:10px; width:210px;
+    }
+
+.dropdown-menu.dropdown-user-account .account-footer {
+    background-color:#EDEDED; border-radius:0 0 4px 4px; border-top:1px solid #CCCCCC; clear:both; margin:15px 0 -4px;
+    }
+
+.dropdown-menu.dropdown-user-account .account-info p a {
+    color:#454545 !important; display:inline-block;
+    }
+
+.dropdown-user-account .btn { color:#333; }
+
+.dropdown-user-account .btn-danger { color:white; }
+
+hr.spacer { background:none; color:transparent; border:none; }
+
+.developer-contact.well { margin-left:0; }
+
+.developer-contact .thumbnail { margin-left:0; }
+
+#services h6 { font-size:14px; text-transform:none; font-weight:normal; }
+
+#services .block { height:65px; padding-left:56px; background:left top no-repeat; }
+
+#services .block a { color:inherit; font-weight:bolder; }
+
+#services .ruby { color:#A92B3C; background-image:url("../images/logo-rails.gif"); }
+
+#services .html { color:#DF4E28; background-image:url("../images/logo-html5.gif"); }
+
+#services .design { color:#D4AD08; background-image:url("../images/logo-fw.gif"); }
+
+.left-column .nav-list { margin-left:0; padding-left:0; }
+
+ul.portfolio-list { clear:both; margin-left:0; }
+
+.portfolio-card-border { background-color:#eaeaea; border-radius:9px 9px 9px 9px; padding:4px; clear:both; }
+
+.portfolio-card-inner {
+    height:360px; padding:5px; background-color:white; border:1px solid #DDDDDD; border-radius:6px 6px 6px 6px;
+    overflow:hidden; background-position:0 307px;
+    background-image:url("http://d297h9he240fqh.cloudfront.net/cache-bebbeb2c2/images/compass/bg-card-gradient.png");
+    background-repeat:repeat-x;
+    }
+
+li.portfolio { display:inline; float:left; margin:0 20px 20px 0; padding:0; width:220px; }
+
+li.portfolio .info { padding:10px 5px; }
+
+li.portfolio .thumbnail { position:relative; overflow:hidden; width:198px; height:158px; border:none; box-shadow:none; padding:0; }
+
+li.portfolio .thumbnail .show-more { visibility:hidden; }
+
+li.portfolio .thumbnail .show-more a { }
+
+li.portfolio .thumbnail:hover .show-more {
+    color:white; font-weight:bold; font-size:26px; background-color:#333333; visibility:visible; height:100%; width:100%;
+    padding:70px 0; opacity:0.7; position:absolute; text-align:center; z-index:100; }
+
+li.portfolio h5 { color:#CC9900; }
+
+li.portfolio p { height:110px; font-size:12px; line-height:15px; color:#999999; }
+
+li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }

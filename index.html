@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
     <script type="text/javascript" src="docs/assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="site/public/javascripts/slimbox2.js"></script>
 
     <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
     <script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/petr-blahutka/13/423/20" data-format="inline"
@@ -15,99 +16,25 @@
 
     <link rel="stylesheet" href="docs/assets/css/bootstrap.css">
     <link rel="stylesheet" href="docs/assets/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="site/public/stylesheets/slimbox2/slimbox2.css">
+    <link rel="stylesheet" href="site/public/stylesheets/application.css">
 
-    <style type="text/css">
-        .topbar { height:46px; left:0; overflow:visible; position:fixed; right:0; top:0; z-index:10000; }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var portfolioImages = {
+                "najdijob":[
+                    ['site/public/images/najdijob/najdijob_search.png', 'descr 1'],
+                    ['site/public/images/najdijob/home2.png', 'descr 1']
+                ]
+            };
 
-        .navbar-fixed-top { top:auto; }
+            $('.thumbnail a').click(function () {
+                var id = $(this).attr('id');
+                jQuery.slimbox(portfolioImages[id], 0);
+            })
 
-        .navbar-inner { background:none repeat scroll 0 0 #292929; border-bottom:1px solid #121212; }
-
-        .nav.main-nav > li > a { padding:20px 10px; }
-
-        .main-nav > li { border-left:1px solid #4A4A4A; border-right:1px solid #292929; }
-
-        .main-nav {
-            /*background:-moz-linear-gradient(center top, #414141, #323232) repeat-x scroll 0 0 #3A3A3A;*/
-            /*border-bottom:1px solid #000000;*/
-            }
-
-        .main-nav { border-top:1px solid #595959; }
-
-            /* float right menu */
-        .dropdown-menu.dropdown-user-account {
-            width:365px;
-            margin-top:10px;
-            padding-bottom:0px;
-            }
-
-        .dropdown-menu.dropdown-user-account .account-img {
-            background-color:#FEFEFE;
-            border:1px solid #D3D3D3;
-            height:90px;
-            margin:15px 0 0 15px;
-            padding:4px;
-            width:90px;
-            }
-
-        .dropdown-menu.dropdown-user-account .account-img-container {
-            float:left;
-            margin-bottom:15px;
-            margin-left:10px;
-            width:86px;
-            }
-
-        .dropdown-menu.dropdown-user-account .account-info {
-            float:left;
-            margin-bottom:15px;
-            padding-left:10px;
-            width:210px;
-            }
-
-        .dropdown-menu.dropdown-user-account .account-footer {
-            background-color:#EDEDED;
-            border-radius:0 0 4px 4px;
-            border-top:1px solid #CCCCCC;
-            clear:both;
-            margin:15px 0 -4px;
-            }
-
-        .dropdown-menu.dropdown-user-account .account-info p a {
-            color:#454545 !important;
-            display:inline-block;
-            }
-
-        .dropdown-user-account .btn { color:#333; }
-
-        .dropdown-user-account .btn-danger { color:white; }
-
-        .blue.navbar .navbar-inner {
-            /*background: -moz-linear-gradient(center top , #4E8ECE 0%, #356AA0 100%) repeat scroll 0 0 transparent;*/
-            /*box-shadow: none;*/
-            background-color:white;
-            }
-
-        hr.spacer { background:none; color:transparent; border:none; }
-
-        .developer-contact.well { margin-left:0; }
-
-        .developer-contact .thumbnail { margin-left:0; }
-
-        #services h6 { font-size:14px; text-transform:none; font-weight:normal; }
-
-        #services .block { height:65px; padding-left:56px; background:left top no-repeat; }
-
-        #services .block a { color:inherit; font-weight:bolder; }
-
-        #services .ruby { color:#A92B3C; background-image:url("site/public/images/logo-rails.gif"); }
-
-        #services .html { color:#DF4E28; background-image:url("site/public/images/logo-html5.gif"); }
-
-        #services .design { color:#D4AD08; background-image:url("site/public/images/logo-fw.gif"); }
-
-        .left-column .nav-list { margin-left:0; padding-left:0; }
-
-    </style>
+        })
+    </script>
 
 </head>
 <body>
@@ -129,7 +56,7 @@
             <h3>Web enthusiast</h3> <br>
             <ul class="thumbnails">
                 <li class="thumbnail">
-                    <img src="public/images/me-black.gif" alt="">
+                    <img src="site/public/images/me-black.gif" alt="">
                 </li>
             </ul>
             <address>
@@ -176,223 +103,182 @@
 <!-- ======================================================================
     LIST -->
 <div class="span9">
-    <h2>YOU CAN HIRE ME FOR</h2>  <br>
-    <section id="services">
-        <div class="row-fluid">
-            <div class="span4 ruby block">
-                <h1 class="title">Ruby</h1>
-                <h6>with <a href="http://www.rubyonrails.org">Ruby on Rails</a>, <a
-                        href="http://www.sinatrarb.com">Sinatra</a></h6>
-            </div>
-            <div class="span4 html block">
-                <h1>HTML/CSS</h1>
-                <h6>with <a href="http://www.sass">Sass</a>, <a href="">Less</a> and <a href="">Twitter
-                    Bootstrap</a>, javascript <a href="">jQuery</a></h6>
-            </div>
-            <div class="span4 design block">
-                <h1>DESIGN</h1>
-                <h6>with <a href="">Adobe Fireworks</a></h6>
-            </div>
+<h2>YOU CAN HIRE ME FOR</h2>  <br>
+<section id="services">
+    <div class="row-fluid">
+        <div class="span4 ruby block">
+            <h1 class="title">Ruby</h1>
+            <h6>with <a href="http://www.rubyonrails.org">Ruby on Rails</a>, <a
+                    href="http://www.sinatrarb.com">Sinatra</a></h6>
         </div>
-    </section>
-    <hr class="spacer">
-    <hr class="spacer">
-    <h2>Portfolio
-        <small>projects that i was involved</small>
-    </h2>
+        <div class="span4 html block">
+            <h1>HTML/CSS</h1>
+            <h6>with <a href="http://www.sass">Sass</a>, <a href="">Less</a> and <a href="">Twitter
+                Bootstrap</a>, javascript <a href="">jQuery</a></h6>
+        </div>
+        <div class="span4 design block">
+            <h1>DESIGN</h1>
+            <h6>with <a href="">Adobe Fireworks</a></h6>
+        </div>
+    </div>
+</section>
+<hr class="spacer">
+<hr class="spacer">
+<h2>Portfolio
+    <small>projects that i was involved</small>
+</h2>
 
-    <style type="text/css">
-        ul.portfolio-list { clear:both; margin-left:0; }
+<section id="portfolios">
+    <ul class="portfolio-list">
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="#" id="najdijob">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/najdijob/najdijob-thumb.gif">
+                    </div>
+                    <div class="info">
+                        <h5>Najdijob.cz</h5>
 
-        .portfolio-card-border { background-color:#eaeaea; border-radius:9px 9px 9px 9px;
-            padding:4px; clear:both; }
-
-        .portfolio-card-inner {
-            height:360px;
-            padding:5px;
-            background-color:white;
-            border:1px solid #DDDDDD;
-            border-radius:6px 6px 6px 6px;
-            overflow:hidden;
-            background-position:0 307px;
-            background-image:url("http://d297h9he240fqh.cloudfront.net/cache-bebbeb2c2/images/compass/bg-card-gradient.png");
-            background-repeat:repeat-x;
-            }
-
-        li.portfolio { display:inline;
-            float:left;
-            margin:0 20px 20px 0;
-            padding:0;
-            width:220px;
-            }
-
-        li.portfolio .info { padding:10px 5px; }
-
-        li.portfolio .thumbnail {position:relative;overflow:hidden; width:198px; height:158px; border:none; box-shadow:none; padding:0; }
-        li.portfolio .thumbnail .show-more {visibility: hidden;}
-        li.portfolio .thumbnail .show-more a {}
-        li.portfolio .thumbnail:hover .show-more {
-            color: white; font-weight:bold; font-size: 26px;
-            background-color: #333333;
-            visibility: visible;
-            height:100%;
-            width:100%;
-            padding: 70px 0;
-            opacity: 0.7;
-            position: absolute;
-            text-align: center;
-            z-index: 100;}
-        li.portfolio h5 { color:#CC9900; }
-
-        li.portfolio p { height:110px; font-size:12px; line-height:15px; color:#999999; }
-
-        li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
-    </style>
-    <section id="portfolios">
-        <ul class="portfolio-list">
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/najdijob-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Najdijob.cz</h5>
-
-                            <p>Ruby on Rails application. Search engine. Linux setup (capistrano), data grabbing
-                                from web. Data synchronization with Amazon S3 and web server, </p>
-                            <h6>I worked with</h6>
-                            <ul class="unstyled">
-                                <li>jQury,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                                <li>Linux (Ubuntu)</li>
-                            </ul>
-                        </div>
+                        <p>Ruby on Rails application. Search engine. Linux setup (capistrano), data grabbing
+                            from web. Data synchronization with Amazon S3 and web server, </p>
+                        <h6>I worked with</h6>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                            <li>Linux (Ubuntu)</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/adwave-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Adwave.com</h5>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/adwave-thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Adwave.com</h5>
 
-                            <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
-                            <ul class="unstyled">
-                                <li>jQuery,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQuery,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/dentservis-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Dentservis.cz</h5>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Dentservis.cz</h5>
 
-                            <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
-                            <ul class="unstyled">
-                                <li>jQury,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/facetuner-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Facetuner.com</h5>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/facetuner-thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Facetuner.com</h5>
 
-                            <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
-                            <ul class="unstyled">
-                                <li>jQury,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/dentservis-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Dentservis.cz</h5>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Dentservis.cz</h5>
 
-                            <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
-                            <ul class="unstyled">
-                                <li>jQury,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
-            <li class="portfolio">
-                <div class="portfolio-card-border">
-                    <div class="portfolio-card-inner">
-                        <div class="thumbnail">
-                            <a href=""><div class="show-more">show more</div></a>
-                            <img alt="" src="site/public/images/dentservis-thumb.png">
-                        </div>
-                        <div class="info">
-                            <h5>Dentservis.cz</h5>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Dentservis.cz</h5>
 
-                            <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
-                            <ul class="unstyled">
-                                <li>jQury,</li>
-                                <li>HTML/CSS,</li>
-                                <li>Ruby on Rails,</li>
-                                <li>Design</li>
-                            </ul>
-                        </div>
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
                     </div>
                 </div>
-            </li>
+            </div>
+        </li>
 
 
-        </ul>
+    </ul>
 
-    </section>
+</section>
 </div>
 </div>
 </div>
-
-
-<script>
-    template = Hogan.compile(document.getElementById("myPartial").innerHTML);
-    //    document.body.innerHTML = template.render(context);
-</script>
 </body>
 
 
