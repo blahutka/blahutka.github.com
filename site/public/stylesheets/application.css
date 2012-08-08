@@ -64,7 +64,7 @@ ul.portfolio-list { clear:both; margin-left:0; }
 .portfolio-card-inner {
     height:360px; padding:5px; background-color:white; border:1px solid #DDDDDD; border-radius:6px 6px 6px 6px;
     overflow:hidden; background-position:0 307px;
-    background-image:url("http://d297h9he240fqh.cloudfront.net/cache-bebbeb2c2/images/compass/bg-card-gradient.png");
+    background-image:url("../images/bg-portfolio-gradient.png");
     background-repeat:repeat-x;
     }
 
@@ -74,12 +74,10 @@ li.portfolio .info { padding:10px 5px; }
 
 li.portfolio .thumbnail { position:relative; overflow:hidden; width:198px; height:158px; border:none; box-shadow:none; padding:0; }
 
-li.portfolio .thumbnail .show-more { visibility:hidden; }
-
-li.portfolio .thumbnail .show-more a { }
+li.portfolio .thumbnail .show-more { display:none; }
 
 li.portfolio .thumbnail:hover .show-more {
-    color:white; font-weight:bold; font-size:26px; background-color:#333333; visibility:visible; height:100%; width:100%;
+    color:white; font-weight:bold; font-size:26px; background-color:#333333; display:block; height:100%; width:100%;
     padding:70px 0; opacity:0.7; position:absolute; text-align:center; z-index:100; }
 
 li.portfolio h5 { color:#CC9900; }

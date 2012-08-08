@@ -6,13 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>
+    <!--<script type="text/javascript" src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>-->
     <script type="text/javascript" src="docs/assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="site/public/javascripts/slimbox2.js"></script>
 
-    <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
-    <script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/petr-blahutka/13/423/20" data-format="inline"
-            data-related="false"></script>
+    <!--<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>-->
+    <!--<script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/petr-blahutka/13/423/20" data-format="inline"-->
+    <!--data-related="false"></script>-->
 
     <link rel="stylesheet" href="docs/assets/css/bootstrap.css">
     <link rel="stylesheet" href="docs/assets/css/bootstrap-responsive.css">
@@ -23,8 +23,46 @@
         $(document).ready(function () {
             var portfolioImages = {
                 "najdijob":[
-                    ['site/public/images/najdijob/najdijob_search.png', 'descr 1'],
-                    ['site/public/images/najdijob/home2.png', 'descr 1']
+                    ['site/public/images/najdijob/home2.png', 'descr 1'],
+                    ['site/public/images/najdijob/najdijob_search.png', 'descr 1']
+                ],
+                "adw":[
+                    ['site/public/images/adw/home.png', ''],
+                    ['site/public/images/adw/demo.png', ''],
+                    ['site/public/images/adw/how-it-works.png', '']
+                ],
+                "dentservis":[
+                    ['site/public/images/dentservis/dashboard.png', ''],
+                    ['site/public/images/dentservis/orders.png', ''],
+                    ['site/public/images/dentservis/orders_form.png', '']
+                ],
+                "ftuner":[
+                    ['site/public/images/ftuner/home.png', ''],
+                    ['site/public/images/ftuner/faq.png', '']
+                ],
+                "najdijob":[
+                    ['site/public/images/najdijob/home2.gif', ''],
+                    ['site/public/images/najdijob/search.png', ''],
+                    ['site/public/images/najdijob/search_range.png', '']
+                ],
+                "pservis":[
+                    ['site/public/images/pservis/dashboard.png', ''],
+                    ['site/public/images/pservis/orders.png', ''],
+                    ['site/public/images/pservis/form.png', '']
+                ],
+                "rgiant":[
+                    ['site/public/images/rgiant/home.png', '']
+                ],
+                "strechy-ondrik":[
+                    ['site/public/images/strechy-ondrik/home.png', ''],
+                    ['site/public/images/strechy-ondrik/gallery.png', '']
+                ],
+                "strelecdent":[
+                    ['site/public/images/strelecdent/home.gif', ''],
+                    ['site/public/images/strelecdent/modal_form.gif', ''],
+                    ['site/public/images/strelecdent/modal.gif', ''],
+                    ['site/public/images/strelecdent/admin.gif', ''],
+                    ['site/public/images/strelecdent/admin_img.gif', '']
                 ]
             };
 
@@ -124,6 +162,8 @@
 </section>
 <hr class="spacer">
 <hr class="spacer">
+<!-- ===================================================================================
+PORTFOLIO -->
 <h2>Portfolio
     <small>projects that i was involved</small>
 </h2>
@@ -137,7 +177,7 @@
                         <a href="#" id="najdijob">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/najdijob/najdijob-thumb.gif">
+                        <img alt="" src="site/public/images/najdijob/thumb.gif">
                     </div>
                     <div class="info">
                         <h5>Najdijob.cz</h5>
@@ -160,10 +200,10 @@
             <div class="portfolio-card-border">
                 <div class="portfolio-card-inner">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="#" id="adw">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/adwave-thumb.png">
+                        <img alt="" src="site/public/images/adw/thumb.png">
                     </div>
                     <div class="info">
                         <h5>Adwave.com</h5>
@@ -183,10 +223,10 @@
             <div class="portfolio-card-border">
                 <div class="portfolio-card-inner">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="#" id="dentservis">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                        <img alt="" src="site/public/images/dentservis/thumb.png">
                     </div>
                     <div class="info">
                         <h5>Dentservis.cz</h5>
@@ -206,10 +246,10 @@
             <div class="portfolio-card-border">
                 <div class="portfolio-card-inner">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="#" id="ftuner">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/facetuner-thumb.png">
+                        <img alt="" src="site/public/images/ftuner/thumb.png">
                     </div>
                     <div class="info">
                         <h5>Facetuner.com</h5>
@@ -229,13 +269,13 @@
             <div class="portfolio-card-border">
                 <div class="portfolio-card-inner">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="#" id="pservis">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                        <img alt="" src="site/public/images/pservis/thumb.png">
                     </div>
                     <div class="info">
-                        <h5>Dentservis.cz</h5>
+                        <h5>PohodovyServis.cz</h5>
 
                         <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
                         <ul class="unstyled">
@@ -252,13 +292,59 @@
             <div class="portfolio-card-border">
                 <div class="portfolio-card-inner">
                     <div class="thumbnail">
-                        <a href="">
+                        <a href="#" id="rgiant">
                             <div class="show-more">show more</div>
                         </a>
-                        <img alt="" src="site/public/images/dentservis-thumb.png">
+                        <img alt="" src="site/public/images/rgiant/thumb.png">
                     </div>
                     <div class="info">
-                        <h5>Dentservis.cz</h5>
+                        <h5>RabateGiant.com</h5>
+
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="#" id="strechy-ondrik">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/strechy-ondrik/thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>Strechny-Ondrik.cz</h5>
+
+                        <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
+                        <ul class="unstyled">
+                            <li>jQury,</li>
+                            <li>HTML/CSS,</li>
+                            <li>Ruby on Rails,</li>
+                            <li>Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="portfolio">
+            <div class="portfolio-card-border">
+                <div class="portfolio-card-inner">
+                    <div class="thumbnail">
+                        <a href="#" id="strelecdent">
+                            <div class="show-more">show more</div>
+                        </a>
+                        <img alt="" src="site/public/images/strelecdent/thumb.png">
+                    </div>
+                    <div class="info">
+                        <h5>StrelecDent.cz</h5>
 
                         <p>Ttellus ac cursus commodo, tortor mauris condimentum nibh,</p>
                         <ul class="unstyled">
