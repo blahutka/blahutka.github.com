@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+title
+
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, :as => :string %>
+    <a href="#" class="btn btn-success">button</a>
+  <%= f.submit 'test' %>
+<% end %>
+
+<!---->

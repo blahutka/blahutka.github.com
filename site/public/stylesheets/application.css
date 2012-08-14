@@ -82,6 +82,30 @@ li.portfolio .thumbnail:hover .show-more {
 
 li.portfolio h5 { color:#CC9900; }
 
-li.portfolio p { height:110px; font-size:12px; line-height:15px; color:#999999; }
+li.portfolio p { height:77px; font-size:12px; line-height:15px; color:#999999; }
 
 li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
+
+.portfolio .pagination { margin:3px; height:28px; }
+
+.portfolio .summary { text-align:center; }
+
+.portfolio-tabs { margin-bottom:2px; width:100%; }
+
+.portfolio-tabs > li.active > a, .portfolio-tabs > li.active > a:hover { }
+
+.portfolio-tabs > li > a { padding:0 3px; font-size:13px; }
+
+.portfolio .progress { height:9px; margin-bottom:1px; }
+
+.portfolio .icon-ok { }
+
+.portfolio .skill { font-size:12px; color:#999999; }
+
+.portfolio .nano { max-height:257px; }
+
+.portfolio .slim-content { margin-top:10px; }
+
+.portfolio h6 {font-weight:normal;}
+
+.skill-master { color:#2e8b57; }
