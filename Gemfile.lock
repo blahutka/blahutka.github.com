@@ -97,6 +97,8 @@ GEM
       tilt (~> 1.3)
     sinatra-outputbuffer (0.1.0)
       sinatra (>= 1.0.a)
+    sinatra-partial (0.3.1)
+      sinatra
     sinatra-static (0.1.1)
       rack
       rack-test
@@ -137,6 +139,7 @@ DEPENDENCIES
   sinatra-advanced-routes
   sinatra-cache
   sinatra-contrib
+  sinatra-partial
   sinatra-static
   sqlite3-ruby
   tux

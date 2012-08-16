@@ -100,11 +100,13 @@ li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
 
 .portfolio .icon-ok { }
 
-.portfolio .skill { font-size:12px; color:#999999; }
+.portfolio .skill { font-size:12px; color:#999999; margin-left:45px; padding: 5px 0 5px 20px; background:left center url('../images/icon-gem.png') no-repeat transparent; }
+.portfolio .slim-content .skill-row:hover {background-color: #eaeaea;}
 
 .portfolio .nano { max-height:257px; }
 
-.portfolio .slim-content { margin-top:10px; }
+.portfolio .slim-content { margin-top:10px;}
+.portfolio .meta { margin-top: 20px; margin-left:7px; }
 
 .portfolio h6 {font-weight:normal;}
 

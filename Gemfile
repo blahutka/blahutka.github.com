@@ -9,6 +9,7 @@ gem "cells" , :git => 'git://github.com/apotonick/cells.git'
 gem "simple_form"
 gem 'sinatra-contrib'
 gem 'sinatra-cache'
+gem 'sinatra-partial'
 
 
 group :development do

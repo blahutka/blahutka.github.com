@@ -1,0 +1,65 @@
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-<%= portfolio.id  %>" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-<%= portfolio.id  %>" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-<%= portfolio.id  %>">
+          <div class="summary">
+            <h4><%= portfolio.name %></h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+            <% portfolio.gems.try(:each) do |gem| %>
+                <% name, version = gem %>
+                <div class="skill"><a href="http://rubygems.org/gems/<%= name %>" target="_blank"><%= name %><%= ", v #{version}" if version %></a>
+                </div>
+            <% end %>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5><%= portfolio.gems.try(:size) %></h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-<%= portfolio.id  %>">
+          <div class="thumbnail">
+            <a href="#" id="<%= portfolio.id  %>">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/<%= portfolio.id  %>/thumb.png">
+          </div>
+          <div class="info">
+            <h5><%= portfolio.name %></h5>
+
+            <p><%= portfolio.description %></p>
+
+            <ul class="unstyled">
+              <li>Ruby on Rails,</li>
+              <li>Prototype (javascript),</li>
+              <li>HTML/CSS,</li>
+              <li>Design</li>
+              <li>Linux (Ubuntu)</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</li>
