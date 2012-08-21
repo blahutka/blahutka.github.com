@@ -2,7 +2,6 @@ source :rubygems
 
 gem 'sinatra'
 gem 'activerecord'
-gem 'sqlite3-ruby'
 gem 'mini_record'
 gem 'sinatra-advanced-routes'
 gem "cells" , :git => 'git://github.com/apotonick/cells.git'
@@ -13,6 +12,7 @@ gem 'sinatra-partial'
 
 
 group :development do
+  gem 'sqlite3-ruby'
   gem 'shotgun' # auto reload
   gem 'tux' #sinatra console  RUN:$ tux -c app.rb
   gem 'rack-test'
