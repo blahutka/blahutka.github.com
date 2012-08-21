@@ -1,10 +1,12 @@
 require 'active_record'
 require 'mini_record'
 
-ActiveRecord::Base.establish_connection(
-    :adapter => "sqlite3",
-    :database => "portfolio.db"
-)
+configuration :development do
+  ActiveRecord::Base.establish_connection(
+      :adapter => "sqlite3",
+      :database => "portfolio.db"
+  )
+end
 
 class Post < ActiveRecord::Base
   field :title, :type => :string
