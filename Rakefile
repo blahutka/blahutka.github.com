@@ -1,10 +1,14 @@
-require "rack/test"
-require 'sinatra_static'
-require File.join(File.dirname(File.expand_path(__FILE__)), 'app')
+
 
 namespace :site do
 
-  task :setup do
+  task :environment do
+    require "rack/test"
+    require 'sinatra_static'
+    require File.join(File.dirname(File.expand_path(__FILE__)), 'app')
+  end
+
+  task :setup => :environment do
     puts '*'*50
     puts 'SETUP FOLDERS'
     $path = File.join(Portfolio.root, Portfolio.settings.static_site)
@@ -21,11 +25,19 @@ namespace :site do
 
   task :seed do
     puts ''
-    puts'*'*50
+    puts '*'*50
     puts 'SEED DATA'
     Portfolio::Post.auto_upgrade!
-    Portfolio::Post.where(:title => 'First post2', :position =>  1).first_or_create
-    puts'*'*50
+    Portfolio::Post.where(:title => 'First post2', :position => 1).first_or_create
+    puts '*'*50
   end
+
+end
+
+task :start do
+   `bundle exec rackup config.ru`
+end
+
+task :run => :start do
 
 end

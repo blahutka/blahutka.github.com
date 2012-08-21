@@ -59,10 +59,11 @@ hr.spacer { background:none; color:transparent; border:none; }
 
 ul.portfolio-list { clear:both; margin-left:0; }
 
-.portfolio-card-border { background-color:#eaeaea; border-radius:9px 9px 9px 9px; padding:4px; clear:both; }
+/*.portfolio-card-border { background-color:#eaeaea; border-radius:9px 9px 9px 9px; padding:4px; clear:both; }*/
+.portfolio-card-border { background-color:#DED1D4; border-radius:9px 9px 9px 9px; padding:4px; clear:both; }
 
 .portfolio-card-inner {
-    height:360px; padding:5px; background-color:white; border:1px solid #DDDDDD; border-radius:6px 6px 6px 6px;
+    height:360px; padding:5px; background-color:white; border:1px solid #C6A5AB; border-radius:6px 6px 6px 6px;
     overflow:hidden; background-position:0 307px;
     background-image:url("../images/bg-portfolio-gradient.png");
     background-repeat:repeat-x;

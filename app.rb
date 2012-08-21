@@ -64,17 +64,24 @@ class Portfolio < Sinatra::Base
                          :gems => [
                              ["sass", "(css)"], ["jQuery", "(javascript)"], ['erb', "html"]
                          ]),
+
           OpenStruct.new(:id => 'dentservis', :name => 'Dentservis.cz', :description => "Contract management
                           for Dentist Laboratories. This is first stage prototyping (TwitterBootstrap) and design UI.
                           Some RubyOnRails setup and structure",
                          :gems => []),
+
           OpenStruct.new(:id => 'ftuner', :name => 'Facetuner.com', :description => 'Social application. I worked
                          as HTML/CSS webmaster', :gems => [['jQuery'], ['HTML'], ['CSS']]),
+
           OpenStruct.new(:id => 'pservis', :name => 'PohodovyServis.cz', :description => "Customer service
                          for electronics, PC etc. One place to deal with you service. I worked on whole application",
                          :gems => [[]]),
+
           OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant', :description => "", :gems => []),
-          OpenStruct.new()
+
+          OpenStruct.new(:id => 'strechy-ondrik', :name => 'Strechy-Ondrik.cz', :description => '', :gems => []),
+
+          OpenStruct.new(:id => 'strelecdent', :name => 'StrelecDent.cz', :description => '', :gems => [])
 
       ]
     end
