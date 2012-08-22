@@ -57,5 +57,10 @@ $(document).ready(function () {
     $('.slim-content').slimScroll({
         height:'230px'
     });
+
+    $('a.see-more').click(function(){
+        $(this).parents('li.portfolio').find('.portfolio-tabs a:last').tab('show');
+        return false;
+    })
     //{ scroll:'top', flash:true, sliderMinHeight:40, alwaysVisible:true }
 })

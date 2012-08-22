@@ -6,6 +6,7 @@ require "sinatra/advanced_routes"
 require './site/views/cells/posts_cell'
 require 'sinatra/partial'
 require 'ostruct'
+require 'active_support'
 
 class Portfolio < Sinatra::Base
 
@@ -31,60 +32,150 @@ class Portfolio < Sinatra::Base
     erb :home
   end
 
+  def self.gem(params)
+    OpenStruct.new(params)
+  end
 
   configure do
     register Sinatra::Partial
     set :partial_template_engine, :erb
     enable :partial_underscores
 
+
     set :portfolios do
       [
           OpenStruct.new(:id => 'najdijob', :name => 'Najdijob.cz', :description => "Job search engine.
               I build this application for myself. Server setup (capistrano), data grabbing
-              from web. Data synchronization with Amazon S3 and web server.
-              <a href=\"#\" onclick=\"$('.portfolio-tabs a:last').tab('show');\">Gems</a>",
+              from web. Data synchronization with Amazon S3 and web server.",
                          :gems => [
-                             ["rails", '2.2.2'],
-                             ["geonames"],
-                             ["ultrasphinx"],
-                             ["capistrano"],
-                             ["capistrano-ext"],
-                             ["deprec"],
-                             ["capistrano_colors"],
-                             ["aws-s3"],
-                             ["eventmachine"],
-                             ["ebuilder"],
-                             ["tlsmail"],
-                             ["mysql2"],
-                             ["mysqlplus"]
+                             gem(:name => 'rails', :full_name => 'Ruby on Rails', :version => '2.2.2', :featured => true),
+                             gem(:name => 'geonames', :featured => true),
+                             gem(:name => 'ultrasphinx', :featured => true),
+                             gem(:name => 'capistrano', :featured => true),
+                             gem(:name => 'capistrano-ext'),
+                             gem(:name => 'deprec'),
+                             gem(:name => 'capistrano_colors'),
+                             gem(:name => 'aws-s3'),
+                             gem(:name => 'eventmachine'),
+                             gem(:name => 'ebuilder'),
+                             gem(:name => 'tlsmail'),
+                             gem(:name => 'mysql2'),
+                             gem(:name => 'mysqlplus'),
+                             gem(:name => 'jQuery', :url => 'http://jquery.com', :featured => true),
+                             gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
+                             gem(:name => 'Css', :url => 'http://www.w3.org/Style/Overview.html')
                          ]),
           OpenStruct.new(:id => 'adw', :name => 'Adwave.com', :description => "AdWave is a free cross-promotional
                          and advertising network enabling developers,
                         advertisers and publishers to grow their social apps.",
                          :gems => [
-                             ["sass", "(css)"], ["jQuery", "(javascript)"], ['erb', "html"]
+                             gem(:name => 'sass', :featured => true),
+                             gem(:name => 'jQuery', :url => 'http://jquery.com', :featured => true),
+                             gem(:name => 'html', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc', :featured => true)
                          ]),
 
           OpenStruct.new(:id => 'dentservis', :name => 'Dentservis.cz', :description => "Contract management
-                          for Dentist Laboratories. This is first stage prototyping (TwitterBootstrap) and design UI.
-                          Some RubyOnRails setup and structure",
-                         :gems => []),
+                      for Dentist Laboratories. This is first stage prototyping (TwitterBootstrap) and design UI.
+                      Some RubyOnRails setup DB and structure",
+                         :gems => [
+                             gem(:name => 'rails', :version => '3.2'),
+                             gem(:name => 'pg', :full_name => 'PostgreSql'),
+                             gem(:name => 'sassy_noise'),
+                             gem(:name => 'sass-rails'),
+                             gem(:name => 'less-rails-bootstrap'),
+                             gem(:name => 'bootstrap-datepicker-rails'),
+                             gem(:name => 'state_machine'),
+                             gem(:name => 'will_paginate'),
+                             gem(:name => 'inherited_resources'),
+                             gem(:name => 'simple_form'),
+                             gem(:name => 'erector'),
+                             gem(:name => 'mini_record'),
+                             gem(:name => 'meta_search'),
+                             gem(:name => 'friendly_id'),
+                             gem(:name => 'wicked_pdf'),
+                             gem(:name => 'googlecharts'),
+                             gem(:name => 'completeness-fu'),
+                             gem(:name => 'delayed_job'),
+                             gem(:name => 'delayed_job_active_record'),
+                             gem(:name => 'factory_girl'),
+                             gem(:name => 'simple_audit'),
+                             gem(:name => 'devise'),
+                             gem(:name => 'cancan'),
+                             gem(:name => 'faker')
+                         ]),
 
           OpenStruct.new(:id => 'ftuner', :name => 'Facetuner.com', :description => 'Social application. I worked
-                         as HTML/CSS webmaster', :gems => [['jQuery'], ['HTML'], ['CSS']]),
+                     as HTML/CSS webmaster',
+                         :gems => [
+                             gem(:name => 'jQuery', :url => 'http://jquery.com'),
+                             gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
+                             gem(:name => 'sass')
+                         ]),
 
           OpenStruct.new(:id => 'pservis', :name => 'PohodovyServis.cz', :description => "Customer service
-                         for electronics, PC etc. One place to deal with you service. I worked on whole application",
-                         :gems => [[]]),
+                     for electronics, PC etc. One place to deal with you service. I worked on whole application",
+                         :gems => [
+                             gem(:name => 'rails', :version => '3.2.3'),
+                             gem(:name => 'mysql2'),
+                             gem(:name => 'sass-rails'),
+                             gem(:name => 'less-rails-bootstrap'),
+                             gem(:name => 'bootstrap-datepicker-rails'),
+                             gem(:name => 'simple_state_machine'),
+                             gem(:name => 'will_paginate'),
+                             gem(:name => 'inherited_resources'),
+                             gem(:name => 'simple_form'),
+                             gem(:name => 'erector'),
+                             gem(:name => 'mini_record'),
+                             gem(:name => 'meta_search'),
+                             gem(:name => 'friendly_id'),
+                             gem(:name => 'guard'),
+                             gem(:name => 'factory_girl'),
+                             gem(:name => 'rack-livereload'),
+                             gem(:name => 'capistrano'),
+                             gem(:name => 'jQuery', :url => 'http://jquery.com'),
+                             gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc')
+                         ]),
 
-          OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant', :description => "", :gems => []),
+          OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant', :description => "",
+                         :gems => [
+                             gem(:name => 'jQuery', :url => 'http://jquery.com'),
+                             gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
+                             gem(:name => 'sass')
+                         ]),
 
-          OpenStruct.new(:id => 'strechy-ondrik', :name => 'Strechy-Ondrik.cz', :description => '', :gems => []),
+          OpenStruct.new(:id => 'strechy-ondrik', :name => 'Strechy-Ondrik.cz', :description => '',
+                         :gems => [
+                             gem(:name => 'sinatra'),
+                             gem(:name => 'padriono'),
+                             gem(:name => 'less'),
+                             gem(:name => 'sass'),
+                             gem(:name => 'will_paginate'),
+                             gem(:name => 'erubis'),
+                             gem(:name => 'guard'),
+                             gem(:name => 'html', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
+                             gem(:name => 'jQuery', :url => 'http://jquery.com')
+                         ]),
 
-          OpenStruct.new(:id => 'strelecdent', :name => 'StrelecDent.cz', :description => '', :gems => [])
+      OpenStruct.new(:id => 'strelecdent', :name => 'StrelecDent.cz', :description => '',
+                     :gems => [
+                         gem(:name => 'rails', :version => '3.0.0'),
+                         gem(:name => 'mysql2'),
+                         gem(:name => 'compass'),
+                         gem(:name => ''),
+                         gem(:name => ''),
+                     ]),
+
+      OpenStruct.new(:id => 'ovault', :name => 'OnlineVault.com', :description => '',
+                     :gems => [
+                         gem(:name => 'jQueryMobile'),
+                         gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
+                         gem(:name => 'Css', :url => 'http://www.w3.org/Style/Overview.html')
+                     ])
 
       ]
     end
+
+
   end
 
 

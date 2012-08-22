@@ -3,22 +3,23 @@
     <div class="portfolio-card-inner">
       <div class="pagination">
         <ul class="nav nav-tabs portfolio-tabs ">
-          <li><a href="#home-<%= portfolio.id  %>" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
-          <li><a href="#gems-<%= portfolio.id  %>" data-toggle="tab">ToolBox</a></li>
+          <li><a href="#home-<%= portfolio.id %>" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-<%= portfolio.id %>" data-toggle="tab">ToolBox</a></li>
         </ul>
       </div>
       <div class="tab-content nanox">
-        <div class="tab-pane" id="gems-<%= portfolio.id  %>">
+        <div class="tab-pane" id="gems-<%= portfolio.id %>">
           <div class="summary">
             <h4><%= portfolio.name %></h4>
             <h6>Project was build with</h6>
           </div>
           <div class="row-fluid slim-content">
-            <% portfolio.gems.try(:each) do |gem| %>
-                <% name, version = gem %>
-                <div class="skill"><a href="http://rubygems.org/gems/<%= name %>" target="_blank"><%= name %><%= ", v #{version}" if version %></a>
+            <% portfolio.gems.try(:each) do |gem| -%>
+                <% url ||= "http://rubygems.org/gems/#{gem.name}" -%>
+                <div class="skill">
+                  <a href="<%= url %>" target="_blank"><%= gem.name %><%= ", v #{gem.version}" if gem.version %></a>
                 </div>
-            <% end %>
+            <% end -%>
             <div class="">&nbsp;</div>
           </div>
           <div class="meta">
@@ -35,12 +36,12 @@
         </div>
 
         <!-- tab 2-->
-        <div class="tab-pane active" id="home-<%= portfolio.id  %>">
+        <div class="tab-pane active" id="home-<%= portfolio.id %>">
           <div class="thumbnail">
-            <a href="#" id="<%= portfolio.id  %>">
+            <a href="#" id="<%= portfolio.id %>">
               <div class="show-more">show more</div>
             </a>
-            <img alt="" src="site/public/images/<%= portfolio.id  %>/thumb.png">
+            <img alt="" src="site/public/images/<%= portfolio.id %>/thumb.png">
           </div>
           <div class="info">
             <h5><%= portfolio.name %></h5>
@@ -48,12 +49,12 @@
             <p><%= portfolio.description %></p>
 
             <ul class="unstyled">
-              <li>Ruby on Rails,</li>
-              <li>Prototype (javascript),</li>
-              <li>HTML/CSS,</li>
-              <li>Design</li>
-              <li>Linux (Ubuntu)</li>
+              <% portfolio.gems[0..4].each do |gem| %>
+                  <li><%= gem.full_name || gem.name.camelize %>,</li>
+              <% end %>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
             </ul>
+
           </div>
 
         </div>
