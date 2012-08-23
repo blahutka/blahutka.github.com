@@ -17,7 +17,7 @@ class Portfolio < Sinatra::Base
 
   register Sinatra::Cache
   set :cache_enabled, true
-  set :cache_environment, :development
+  set :cache_environment, :production
   set :cache_fragments_output_dir, lambda { File.join(settings.public_folder, 'fragments') }
   set :cache_output_dir, lambda { settings.root }
 

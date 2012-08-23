@@ -3,89 +3,908 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <title></title>
+  <title>Blahutka - Ruby on Rails</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ruby on Rails development">
+  <meta name="keywords" content="Ruby on Rails, Ruby, twitter bootstrap, development">
+  <meta name="author" content="Blahutka">
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>
   <!--<script type="text/javascript" src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>-->
-  <script type="text/javascript" src="/docs/assets/js/bootstrap.js"></script>
-  <script type="text/javascript" src="/site/public/javascripts/slimbox2.js"></script>
+  <script type="text/javascript" src="docs/assets/js/bootstrap.js"></script>
+  <script type="text/javascript" src="site/public/javascripts/slimbox2.js"></script>
   <!--<script type="text/javascript" src="site/public/javascripts/jquery.nanoscroller.min.js"></script>-->
-  <script type="text/javascript" src="/site/public/javascripts/slimScroll.min.js"></script>
-  <!--<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>-->
-  <!--<script type="IN/MemberProfile" data-id="http://www.linkedin.com/pub/petr-blahutka/13/423/20" data-format="inline"-->
-  <!--data-related="false"></script>-->
-  <link rel="stylesheet" href="/docs/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="/docs/assets/css/bootstrap-responsive.css">
-  <link rel="stylesheet" href="/stylesheets/font-awesome.css">
+  <script type="text/javascript" src="site/public/javascripts/slimScroll.min.js"></script>
+  <script type="text/javascript" src="site/public/javascripts/application.js"></script>
+  <link rel="stylesheet" href="docs/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="docs/assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="site/public/stylesheets/font-awesome.css">
   <!--<link rel="stylesheet" href="site/public/stylesheets/nanoscroller.css">-->
-  <link rel="stylesheet" href="/stylesheets/slimbox2/slimbox2.css">
-  <link rel="stylesheet" href="/stylesheets/application.css">
-  <script type="text/javascript">
-      $(document).ready(function () {
-          var portfolioImages = {
-              "najdijob":[
-                  ['site/public/images/najdijob/home2.png', 'descr 1'],
-                  ['site/public/images/najdijob/najdijob_search.png', 'descr 1']
-              ],
-              "adw":[
-                  ['site/public/images/adw/home.png', ''],
-                  ['site/public/images/adw/demo.png', ''],
-                  ['site/public/images/adw/how-it-works.png', '']
-              ],
-              "dentservis":[
-                  ['site/public/images/dentservis/dashboard.png', ''],
-                  ['site/public/images/dentservis/orders.png', ''],
-                  ['site/public/images/dentservis/orders_form.png', '']
-              ],
-              "ftuner":[
-                  ['site/public/images/ftuner/home.png', ''],
-                  ['site/public/images/ftuner/faq.png', '']
-              ],
-              "najdijob":[
-                  ['site/public/images/najdijob/home2.gif', ''],
-                  ['site/public/images/najdijob/search.png', ''],
-                  ['site/public/images/najdijob/search_range.png', '']
-              ],
-              "pservis":[
-                  ['site/public/images/pservis/dashboard.png', ''],
-                  ['site/public/images/pservis/orders.png', ''],
-                  ['site/public/images/pservis/form.png', '']
-              ],
-              "rgiant":[
-                  ['site/public/images/rgiant/home.png', '']
-              ],
-              "strechy-ondrik":[
-                  ['site/public/images/strechy-ondrik/home.png', ''],
-                  ['site/public/images/strechy-ondrik/gallery.png', '']
-              ],
-              "strelecdent":[
-                  ['site/public/images/strelecdent/home.gif', ''],
-                  ['site/public/images/strelecdent/modal_form.gif', ''],
-                  ['site/public/images/strelecdent/modal.gif', ''],
-                  ['site/public/images/strelecdent/admin.gif', ''],
-                  ['site/public/images/strelecdent/admin_img.gif', '']
-              ]
-          };
-          $('.thumbnail a').click(function () {
-              var id = $(this).attr('id');
-              jQuery.slimbox(portfolioImages[id], 0);
-          })
-      })
-  </script>
+  <link rel="stylesheet" href="site/public/stylesheets/slimbox2/slimbox2.css">
+  <link rel="stylesheet" href="site/public/stylesheets/application.css">
 </head>
 <body>
 <div class="container-fluid">
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head></head>
-<body>
-<h1>test</h1>
-    <a href="/posts/detail">test</a> <br>
-    <a href="/posts/detail">First post</a> <br>
-    <a href="/posts/detail">First post2</a> <br>
-</body>
-</html>
+  <div class="tobar hidden-phone">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <br><br>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+  </div>
+  <div class="row-fluid">
+    <div class="span3 left-column">
+      <div class="row-fluid">
+        <div class="developer-contact well span10">
+          <h3>Web enthusiast</h3> <br>
+          <ul class="thumbnails">
+            <li class="thumbnail">
+              <img src="site/public/images/me-black.gif" alt="">
+            </li>
+          </ul>
+          <address>
+            <strong>Petr Blahutka</strong><br>
+            Czech Republic <br>
+            <abbr title="Email"><a href="mailto:blahutka[at]centrum.cz">blahutka[at]centrum.cz</a></abbr> <br>
+            <abbr title="Linkedin.com"><a href="http://cz.linkedin.com/pub/petr-blahutka/13/423/20" target="_blank">linkedin.com</a></abbr><br>
+          </address>
+        </div>
+      </div>
+      <h3>Design</h3>
+      <p>I prefere to develope
+        <a href="http://en.wikipedia.org/wiki/Outside%E2%80%93in_software_development">Outside In</a> style. Start with
+        fast prototyping with
+        <a href="http://www.adobe.com/products/fireworks.html" target="_blank">Adobe Fireworks</a>
+        then HTML/CSS with
+        <a href="http://twitter.github.com/bootstrap" target="_blank" title="Twitter Bootstrap css framework">TwitterBootstrap</a>
+        and last but not least <a href="http://www.rubyonrails.org" target="_blank">Ruby on Rails</a>.</p>
+      <hr/> 
+      <h3>HTML/CSS</h3>
+      <p>I'm using for views development CSS with
+        <a href="http://sass-lang.com" target="_blank" title="Sass - css tool for OOP with stylesheets">Sass</a> or
+        <a href="http://lesscss.org/" target="_blank">Less</a> and
+        <a href="http://twitter.github.com/bootstrap" target="_blank" title="Twitter Bootstrap : CSS framework ">TwitterBootstrap</a>.
+        For javascript
+        <a href="http://jquery.com" target="_blank" title="jQuery javascript library">jQuery</a>. If this is bigger
+        project I prefer to use
+        <a href="http://en.wikipedia.org/wiki/Object-oriented_programming" title="Object Oriented Programing">OOP</a>
+        views with <a href="http://erector.rubyforge.org/" target="_blank" title="Erector ruby gem">Erector</a>.</p>
+      <hr/> 
+      <H3>Ruby</H3>
+      <p>I love to work with <a href="http://ruby-lang.org" target="_blank" title="Ruby language">Ruby</a> and
+        <a href="http://rubyonrails.org" target="_blank" title="Ruby on Rails MVC framework">Ruby on Rails</a>.
+        If the project is really small application/micro page I use
+        <a href="http://www.sinatrarb.com" target="_blank" title="Sinatra ruby framework">Sinatra</a>
+        with support
+        <a href="http://padrinorb.com" target="_blank" title="Padrino ruby framework on Sinatra">Padrino</a>.</p>
+      <hr/> 
+      <h3>Testing and BDD,
+        TDD</h3>
+      <p>
+        I think this should be the standard on every
+        <a href="http://www.rubyonrails.org" target="_blank" title="Ruby on Rails">ROR</a> project.
+        Development with <a href="http://cukes.info/" target="_blank" title="Cucumber testing">Cucumber</a> and
+        <a href="http://rspec.info" target="_blank" title="RSpec testing">RSpec</a>
+        is perfect solution for
+        <a href="http://en.wikipedia.org/wiki/Behavior-driven_development" target="_blank" title="Behavior Driven Development">BDD</a>
+        or <a href="http://en.wikipedia.org/wiki/Test-driven_development" target="_blank" title="Test Driven Development">TDD</a>.
+        But on projects that I was involved
+        this was newer the request. <br><br>I'm trying some touch with Cucumber/Rspec on my own projects.
+        This is my priority for now to do better development.
+      </p>
+      <hr/>
+      <h3>I'm also interested in</h3>
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          Lean development
+        </li>
+        <li>
+          <a href="#">Eric Ries (www.leandevelopment.com)</a>
+        </li>
+        <li>
+          <a href="#">Library</a>
+        </li>
+      </ul>
+    </div>
+    <!-- ======================================================================
+   LIST -->
+    <div class="span8 offset1">
+      <h2>YOU CAN HIRE ME FOR</h2>  <br>
+      <section id="services">
+        <div class="row-fluid">
+          <div class="span4 ruby block">
+            <h1 class="title">Ruby</h1>
+            <h6>with <a href="http://www.rubyonrails.org" target="_blank">Ruby on Rails</a>, <a
+            href="http://www.sinatrarb.com" target="_blank">Sinatra</a> on
+              <a href="http://padrinorb.com" target="_blank">Padrino</a></h6>
+          </div>
+          <div class="span4 html block">
+            <h1>HTML/CSS</h1>
+            <h6>css with <a href="http://sass-lang.com" target="_blank">Sass</a> or
+              <a href="http://lesscss.org/" target="_blank">Less</a> and
+              <a href="http://twitter.github.com/bootstrap" target="_blank">TwitterBootstrap</a>, javascript
+              <a href="http://jquery.com" target="_blank">jQuery</a>.</h6>
+          </div>
+          <div class="span4 design block">
+            <h1>DESIGN</h1>
+            <h6>and prototyping with
+              <a href="http://www.adobe.com/products/fireworks.html" target="_blank">Adobe Fireworks</a></h6>
+          </div>
+        </div>
+      </section>
+      <hr class="spacer">
+      <hr class="spacer">
+      <!-- ===================================================================================
+     PORTFOLIO -->
+      <h2>Portfolio
+        <small>projects that i was involved</small>
+      </h2>
+      <section id="portfolios">
+        <ul class="portfolio-list">
+          <li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-najdijob" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-najdijob" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-najdijob">
+          <div class="summary">
+            <h4>Najdijob.cz</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/rails" target="_blank">rails, v 2.2.2</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/geonames" target="_blank">geonames</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/ultrasphinx" target="_blank">ultrasphinx</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/capistrano" target="_blank">capistrano</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/capistrano-ext" target="_blank">capistrano-ext</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/deprec" target="_blank">deprec</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/capistrano_colors" target="_blank">capistrano_colors</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/aws-s3" target="_blank">aws-s3</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/eventmachine" target="_blank">eventmachine</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/ebuilder" target="_blank">ebuilder</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/tlsmail" target="_blank">tlsmail</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mysql2" target="_blank">mysql2</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mysqlplus" target="_blank">mysqlplus</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/HTML" target="_blank">HTML</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/Css" target="_blank">Css</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>16</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-najdijob">
+          <div class="thumbnail">
+            <a href="#" id="najdijob">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/najdijob/thumb.png">
+          </div>
+          <div class="info">
+            <h5>Najdijob.cz</h5>
+            <p>Job search engine.
+              I build this application for myself. Server setup (capistrano), data grabbing
+              from web. Data synchronization with Amazon S3 and web server.</p>
+            <ul class="unstyled">
+                  <li>Ruby on Rails,</li>
+                  <li>Geonames,</li>
+                  <li>Ultrasphinx,</li>
+                  <li>Capistrano,</li>
+                  <li>Capistrano-ext,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-adw" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-adw" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-adw">
+          <div class="summary">
+            <h4>Adwave.com</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass" target="_blank">sass</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/html" target="_blank">html</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>3</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-adw">
+          <div class="thumbnail">
+            <a href="#" id="adw">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/adw/thumb.png">
+          </div>
+          <div class="info">
+            <h5>Adwave.com</h5>
+            <p>AdWave is a free cross-promotional
+                         and advertising network enabling developers,
+                        advertisers and publishers to grow their social apps.</p>
+            <ul class="unstyled">
+                  <li>Sass,</li>
+                  <li>JQuery,</li>
+                  <li>Html,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-dentservis" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-dentservis" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-dentservis">
+          <div class="summary">
+            <h4>Dentservis.cz</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/rails" target="_blank">rails, v 3.2</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/pg" target="_blank">pg</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sassy_noise" target="_blank">sassy_noise</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass-rails" target="_blank">sass-rails</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/less-rails-bootstrap" target="_blank">less-rails-bootstrap</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/bootstrap-datepicker-rails" target="_blank">bootstrap-datepicker-rails</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/state_machine" target="_blank">state_machine</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/will_paginate" target="_blank">will_paginate</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/inherited_resources" target="_blank">inherited_resources</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/simple_form" target="_blank">simple_form</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/erector" target="_blank">erector</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mini_record" target="_blank">mini_record</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/meta_search" target="_blank">meta_search</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/friendly_id" target="_blank">friendly_id</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/wicked_pdf" target="_blank">wicked_pdf</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/googlecharts" target="_blank">googlecharts</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/completeness-fu" target="_blank">completeness-fu</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/delayed_job" target="_blank">delayed_job</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/delayed_job_active_record" target="_blank">delayed_job_active_record</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/factory_girl" target="_blank">factory_girl</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/simple_audit" target="_blank">simple_audit</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/devise" target="_blank">devise</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/cancan" target="_blank">cancan</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/faker" target="_blank">faker</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>24</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-dentservis">
+          <div class="thumbnail">
+            <a href="#" id="dentservis">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/dentservis/thumb.png">
+          </div>
+          <div class="info">
+            <h5>Dentservis.cz</h5>
+            <p>Contract management
+                      for Dentist Laboratories. This is first stage prototyping (TwitterBootstrap) and design UI.
+                      Some RubyOnRails setup DB and structure</p>
+            <ul class="unstyled">
+                  <li>Rails,</li>
+                  <li>PostgreSql,</li>
+                  <li>SassyNoise,</li>
+                  <li>Sass-rails,</li>
+                  <li>Less-rails-bootstrap,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-ftuner" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-ftuner" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-ftuner">
+          <div class="summary">
+            <h4>Facetuner.com</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/HTML" target="_blank">HTML</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass" target="_blank">sass</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>3</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-ftuner">
+          <div class="thumbnail">
+            <a href="#" id="ftuner">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/ftuner/thumb.png">
+          </div>
+          <div class="info">
+            <h5>Facetuner.com</h5>
+            <p>Social application. I worked
+                     as HTML/CSS webmaster</p>
+            <ul class="unstyled">
+                  <li>JQuery,</li>
+                  <li>HTML,</li>
+                  <li>Sass,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-pservis" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-pservis" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-pservis">
+          <div class="summary">
+            <h4>PohodovyServis.cz</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/rails" target="_blank">rails, v 3.2.3</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mysql2" target="_blank">mysql2</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass-rails" target="_blank">sass-rails</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/less-rails-bootstrap" target="_blank">less-rails-bootstrap</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/bootstrap-datepicker-rails" target="_blank">bootstrap-datepicker-rails</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/simple_state_machine" target="_blank">simple_state_machine</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/will_paginate" target="_blank">will_paginate</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/inherited_resources" target="_blank">inherited_resources</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/simple_form" target="_blank">simple_form</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/erector" target="_blank">erector</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mini_record" target="_blank">mini_record</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/meta_search" target="_blank">meta_search</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/friendly_id" target="_blank">friendly_id</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/guard" target="_blank">guard</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/factory_girl" target="_blank">factory_girl</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/rack-livereload" target="_blank">rack-livereload</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/capistrano" target="_blank">capistrano</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/HTML" target="_blank">HTML</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>19</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-pservis">
+          <div class="thumbnail">
+            <a href="#" id="pservis">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/pservis/thumb.png">
+          </div>
+          <div class="info">
+            <h5>PohodovyServis.cz</h5>
+            <p>Customer service
+                     for electronics, PC etc. One place to deal with you service. I worked on whole application</p>
+            <ul class="unstyled">
+                  <li>Rails,</li>
+                  <li>Mysql2,</li>
+                  <li>Sass-rails,</li>
+                  <li>Less-rails-bootstrap,</li>
+                  <li>Bootstrap-datepicker-rails,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-rgiant" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-rgiant" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-rgiant">
+          <div class="summary">
+            <h4>RebateGiant</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/HTML" target="_blank">HTML</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass" target="_blank">sass</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>3</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-rgiant">
+          <div class="thumbnail">
+            <a href="#" id="rgiant">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/rgiant/thumb.png">
+          </div>
+          <div class="info">
+            <h5>RebateGiant</h5>
+            <p></p>
+            <ul class="unstyled">
+                  <li>JQuery,</li>
+                  <li>HTML,</li>
+                  <li>Sass,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-strechy-ondrik" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-strechy-ondrik" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-strechy-ondrik">
+          <div class="summary">
+            <h4>Strechy-Ondrik.cz</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sinatra" target="_blank">sinatra</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/padriono" target="_blank">padriono</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/less" target="_blank">less</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/sass" target="_blank">sass</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/will_paginate" target="_blank">will_paginate</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/erubis" target="_blank">erubis</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/guard" target="_blank">guard</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/html" target="_blank">html</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQuery" target="_blank">jQuery</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>9</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-strechy-ondrik">
+          <div class="thumbnail">
+            <a href="#" id="strechy-ondrik">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/strechy-ondrik/thumb.png">
+          </div>
+          <div class="info">
+            <h5>Strechy-Ondrik.cz</h5>
+            <p></p>
+            <ul class="unstyled">
+                  <li>Sinatra,</li>
+                  <li>Padriono,</li>
+                  <li>Less,</li>
+                  <li>Sass,</li>
+                  <li>WillPaginate,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-strelecdent" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-strelecdent" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-strelecdent">
+          <div class="summary">
+            <h4>StrelecDent.cz</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/rails" target="_blank">rails, v 3.0.0</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/mysql2" target="_blank">mysql2</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/compass" target="_blank">compass</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/" target="_blank"></a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/" target="_blank"></a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>5</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-strelecdent">
+          <div class="thumbnail">
+            <a href="#" id="strelecdent">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/strelecdent/thumb.png">
+          </div>
+          <div class="info">
+            <h5>StrelecDent.cz</h5>
+            <p></p>
+            <ul class="unstyled">
+                  <li>Rails,</li>
+                  <li>Mysql2,</li>
+                  <li>Compass,</li>
+                  <li>,</li>
+                  <li>,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+<li class="portfolio">
+  <div class="portfolio-card-border">
+    <div class="portfolio-card-inner">
+      <div class="pagination">
+        <ul class="nav nav-tabs portfolio-tabs ">
+          <li><a href="#home-ovault" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li><a href="#gems-ovault" data-toggle="tab">ToolBox</a></li>
+        </ul>
+      </div>
+      <div class="tab-content nanox">
+        <div class="tab-pane" id="gems-ovault">
+          <div class="summary">
+            <h4>OnlineVault.com</h4>
+            <h6>Project was build with</h6>
+          </div>
+          <div class="row-fluid slim-content">
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/jQueryMobile" target="_blank">jQueryMobile</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/HTML" target="_blank">HTML</a>
+                </div>
+                <div class="skill">
+                  <a href="http://rubygems.org/gems/Css" target="_blank">Css</a>
+                </div>
+            <div class="">&nbsp;</div>
+          </div>
+          <div class="meta">
+            <div class="span3">
+              <h5>3</h5>
+              <h6>Gems</h6>
+            </div>
+            <div class="span4">
+              <h5>1</h5>
+              <h6>Project</h6>
+            </div>
+          </div>
+        </div>
+        <!-- tab 2-->
+        <div class="tab-pane active" id="home-ovault">
+          <div class="thumbnail">
+            <a href="#" id="ovault">
+              <div class="show-more">show more</div>
+            </a>
+            <img alt="" src="site/public/images/ovault/thumb.png">
+          </div>
+          <div class="info">
+            <h5>OnlineVault.com</h5>
+            <p></p>
+            <ul class="unstyled">
+                  <li>JQueryMobile,</li>
+                  <li>HTML,</li>
+                  <li>Css,</li>
+              <li><a href="#" class="pull-right see-more">see all...</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</div>
 </div>
 </body>
+<footer class="footer">
+  <div class="container-fluid">
+    <p class="pull-right"><a href="#">Back to top</a></p>
+    <p>Designed and built with
+      <a href="http://twitter.github.com/bootstrap" target="_blank">twitter bootstrap</a>,
+      <a href="http://sinatrarb.com" target="_blank">Sinatra</a> by Blahutka
+  </div>
+</footer>
+<style type="text/css">
+  .footer {min-height: 100px;}
+</style>
 </html>
