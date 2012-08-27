@@ -41,6 +41,9 @@ $(document).ready(function () {
             ['site/public/images/strelecdent/modal.gif', ''],
             ['site/public/images/strelecdent/admin.gif', ''],
             ['site/public/images/strelecdent/admin_img.gif', '']
+        ],
+        "ovault":[
+            ['site/public/images/ovault/home.png']
         ]
     };
 
@@ -58,7 +61,7 @@ $(document).ready(function () {
         height:'230px'
     });
 
-    $('a.see-more').click(function(){
+    $('a.see-more').click(function () {
         $(this).parents('li.portfolio').find('.portfolio-tabs a:last').tab('show');
         return false;
     })

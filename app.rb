@@ -136,14 +136,16 @@ class Portfolio < Sinatra::Base
                              gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc')
                          ]),
 
-          OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant', :description => "",
+          OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant',
+                         :description => "RebateGiant offers consumers money-saving services including cash back rebates, discount coupons, special promotions and free shipping offers from top brand providers.",
                          :gems => [
                              gem(:name => 'jQuery', :url => 'http://jquery.com'),
                              gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
                              gem(:name => 'sass')
                          ]),
 
-          OpenStruct.new(:id => 'strechy-ondrik', :name => 'Strechy-Ondrik.cz', :description => '',
+          OpenStruct.new(:id => 'strechy-ondrik', :name => 'Strechy-Ondrik.cz',
+                         :description => 'Small presentation for an roofer guy. Padrino framework',
                          :gems => [
                              gem(:name => 'sinatra'),
                              gem(:name => 'padriono'),
@@ -156,16 +158,24 @@ class Portfolio < Sinatra::Base
                              gem(:name => 'jQuery', :url => 'http://jquery.com')
                          ]),
 
-      OpenStruct.new(:id => 'strelecdent', :name => 'StrelecDent.cz', :description => '',
+      OpenStruct.new(:id => 'strelecdent', :name => 'StrelecDent.cz',
+                     :description => 'Small presentation site for Dentist laboratory. Ruby on Rails',
                      :gems => [
                          gem(:name => 'rails', :version => '3.0.0'),
                          gem(:name => 'mysql2'),
                          gem(:name => 'compass'),
-                         gem(:name => ''),
-                         gem(:name => ''),
+                         gem(:name => 'rails_admin'),
+                         gem(:name => 'devise'),
+                         gem(:name => 'i18n_routing'),
+                         gem(:name => 'mini_record'),
+                         gem(:name => 'will_paginate'),
+                         gem(:name => 'magic_encoding'),
+                         gem(:name => 'aws-s3'),
+                         gem(:name => 'paperclip')                      ,
                      ]),
 
-      OpenStruct.new(:id => 'ovault', :name => 'OnlineVault.com', :description => '',
+      OpenStruct.new(:id => 'ovault', :name => 'OnlineVault.com',
+                     :description => 'small yet powerful application that automatically backs up all your important data to secure servers but also makes it possible for you to access it on the go!',
                      :gems => [
                          gem(:name => 'jQueryMobile'),
                          gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),
