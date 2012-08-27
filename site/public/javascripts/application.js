@@ -50,6 +50,7 @@ $(document).ready(function () {
     $('.thumbnail a').click(function () {
         var id = $(this).attr('id');
         jQuery.slimbox(portfolioImages[id], 0);
+        return false;
     })
 
 })
