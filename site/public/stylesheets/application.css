@@ -57,6 +57,9 @@ hr.spacer { background:none; color:transparent; border:none; }
 
 #services .design { color:#D4AD08; background-image:url("../images/logo-fw.gif"); }*/
 
+.knowledge .well {text-align: center }
+.knowledge ol li { display:inline-block;}
+
 .left-column .nav-list { margin-left:0; padding-left:0; }
 
 ul.portfolio-list { clear:both; margin-left:0; }
@@ -73,7 +76,7 @@ ul.portfolio-list { clear:both; margin-left:0; }
 
 li.portfolio { display:inline; float:left; margin:0 20px 20px 0; padding:0; width:220px; }
 
-li.portfolio .info { padding:10px 5px; }
+li.portfolio .info { padding:10px 5px; height: 200px; }
 
 li.portfolio .thumbnail { position:relative; overflow:hidden; width:198px; height:158px; border:none; box-shadow:none; padding:0; }
 
@@ -85,9 +88,9 @@ li.portfolio .thumbnail:hover .show-more {
 
 li.portfolio h5 { color:#CC9900; }
 
-li.portfolio p { height:77px; font-size:12px; line-height:15px; color:#999999; }
+li.portfolio p {font-size:12px; line-height:15px; color:#444444; }
 
-li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
+li.portfolio ul li { float:left; padding-right:3px; font-size:11px; color: #999999; }
 
 .portfolio .pagination { margin:3px; height:28px; }
 
@@ -100,6 +103,10 @@ li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
 .portfolio-tabs > li > a { padding:0 3px; font-size:13px; }
 
 .portfolio .progress { height:9px; margin-bottom:1px; }
+
+.portfolio .tab-content{
+    /*overflow-x: scroll;*/
+    }
 
 .portfolio .icon-ok { }
 
@@ -117,13 +124,23 @@ li.portfolio ul li { float:left; padding-right:3px; font-size:11px; }
 
 .skill-master { color:#2e8b57; }
 
-ol.sequence {background-color:#FCFCFC;border:1px solid #DDDDDD;border-radius:4px 4px 4px 4px;list-style:none outside none;
+.knowledge h3 { margin-bottom: 20px;}
+ol.sequence {
+    background-color:#FCFCFC;
+    border:1px solid #DDDDDD;
+    border-radius:4px 4px 4px 4px;
+    list-style:none outside none;
     margin-left:0;}
 
 ol.sequence a { color:inherit; font-weight:bolder; }
 
-ol.sequence li {border-left:1px dashed #DDDDDD;float:left;overflow:visible;padding:10px;position:relative;
-    text-align:center;width:210px;}
+ol.sequence li {border-left:1px dashed #DDDDDD;
+
+    overflow:visible;
+    padding:10px;
+    position:relative;
+    text-align:center;
+    width:210px;}
 
 ol.sequence li.first { border-left:medium none; }
 
