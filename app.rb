@@ -50,7 +50,8 @@ class Portfolio < Sinatra::Base
                                 gem(name: 'coffee-rails', full_name: 'Coffee Script'),
                                 gem(name: 'sass-rails', full_name: 'Sass CSS') ,
                                 gem(name: 'ruby', full_name: 'Ruby 1.9', version: '1.9'),
-                                gem(:full_name => 'jQuery', name: 'jquery-rails', :url => 'http://jquery.com')
+                                gem(:full_name => 'jQuery', name: 'jquery-rails', :url => 'http://jquery.com'),
+                                gem(:name => 'pg', :full_name => 'PostgreSql')
 
                       ]),
        OpenStruct.new(id: 'brian', name: 'Hyper Local Media Inc, USA',
@@ -98,14 +99,20 @@ class Portfolio < Sinatra::Base
                       description: 'Web app, Managing time and People. I created partially functional prototype (rails application without connection to database)', gems: [
            gem(:name => 'rails', :full_name => 'Ruby on Rails', :version => '3.2', :featured => true),
            gem(:name => 'sass', :featured => true),
-           gem(name: 'twitter-bootstrap-rails', full_name: 'Twitter Bootstrap', version: '2.2', fatured: true),
+           gem(name: 'twitter-bootstrap-rails', full_name: 'Twitter Bootstrap', version: '3.2', fatured: true),
+       ]),
+       OpenStruct.new(id: 'himalaya', name: 'Himalaya (eshop)',
+                      description: 'I created SpreeCommerce eshop. Running on Heroku, and designed according customer preferences', gems: [
+           gem(:name => 'rails', :full_name => 'Ruby on Rails', :version => '3.2', :featured => true),
+           gem(:name => 'spree', full_name: 'SpreeCommerce', :featured => true),
+           gem(name: 'twitter-bootstrap-rails', full_name: 'Twitter Bootstrap', version: '3.2', fatured: true),
        ]),
 
        OpenStruct.new(id: 'adeon', name: 'Teaching app (prototyping)',
                       description: 'Web app for learning and teaching. I created partially functional prototype (rails application without connection to database)', gems: [
            gem(:name => 'rails', :full_name => 'Ruby on Rails', :version => '3.2', :featured => true),
            gem(:name => 'sass', :featured => true),
-           gem(name: 'twitter-bootstrap-rails', full_name: 'Twitter Bootstrap', version: '2.2', fatured: true),
+           gem(name: 'twitter-bootstrap-rails', full_name: 'Twitter Bootstrap', version: '3.2', fatured: true),
        ]),
 
        OpenStruct.new(:id => 'dentservis', :name => 'Dentservis.cz, CZ', :description => "Contract management
@@ -148,7 +155,8 @@ class Portfolio < Sinatra::Base
 
 
        OpenStruct.new(:id => 'rgiant', :name => 'RebateGiant, USA/CZ',
-                      :description => "RebateGiant offers consumers money-saving services including cash back rebates, discount coupons, special promotions and free shipping offers from top brand providers.",
+                      :description => 'RebateGiant offers consumers money-saving services including cash back rebates,
+                        discount coupons, special promotions and free shipping offers from top brand providers.',
                       :gems => [
                              gem(:name => 'jQuery', :url => 'http://jquery.com'),
                              gem(:name => 'HTML', :url => 'http://www.w3.org/TR/html4/cover.html#minitoc'),

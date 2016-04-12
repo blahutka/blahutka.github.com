@@ -96,11 +96,14 @@ $(document).ready(function () {
             ['site/public/images/adeon/01.png', ''],
             ['site/public/images/adeon/02.png', ''],
             ['site/public/images/adeon/03.png', '']
+        ], "himalaya": [
+            ['site/public/images/himalaya/01.png', ''],
+            ['site/public/images/himalaya/02.png', '']
         ]
     };
 
     $('a.show-gallery').click(function () {
-        var id = $(this).attr('id');
+        var id = $(this).data('gallery');
         jQuery.slimbox(portfolioImages[id], 0);
         return false;
     })
@@ -112,6 +115,9 @@ $(document).ready(function () {
     //$(".nano").nanoScroller();
     $('.slim-content').slimScroll({
         height:'230px'
+    });
+    $('.description').slimScroll({
+        height:'82px'
     });
 
     $('a.see-more').click(function () {

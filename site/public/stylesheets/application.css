@@ -61,6 +61,10 @@ hr.spacer { background:none; color:transparent; border:none; }
 .knowledge ol li { display:inline-block;}
 
 .left-column .nav-list { margin-left:0; padding-left:0; }
+.left-column img.pull-left {
+    margin: 5px 10px 10px 0;
+    }
+.left-column h3 {margin-bottom: 10px;}
 
 ul.portfolio-list { clear:both; margin-left:0; }
 
@@ -100,7 +104,7 @@ li.portfolio ul li { float:left; padding-right:3px; font-size:11px; color: #9999
 
 .portfolio-tabs > li.active > a, .portfolio-tabs > li.active > a:hover { }
 
-.portfolio-tabs > li > a { padding:0 3px; font-size:13px; }
+.portfolio-tabs > li > a { padding:0 3px; font-size:13px; color: #333; }
 
 .portfolio .progress { height:9px; margin-bottom:1px; }
 
@@ -113,10 +117,12 @@ li.portfolio ul li { float:left; padding-right:3px; font-size:11px; color: #9999
 .portfolio .skill { font-size:12px; color:#999999; margin-left:45px; padding:5px 0 5px 20px; background:left center url('../images/icon-gem.png') no-repeat transparent; }
 
 .portfolio .slim-content .skill-row:hover { background-color:#eaeaea; }
+.tab-content .info .slimScrollDiv { margin-bottom: 5px;}
 
 .portfolio .nano { max-height:257px; }
 
 .portfolio .slim-content { margin-top:10px; }
+.portfolio .description { overflow:hidden; }
 
 .portfolio .meta { margin-top:20px; margin-left:7px; }
 

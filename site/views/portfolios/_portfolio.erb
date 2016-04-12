@@ -3,7 +3,7 @@
     <div class="portfolio-card-inner">
       <div class="pagination">
         <ul class="nav nav-tabs portfolio-tabs ">
-          <li><a href="#home-<%= portfolio.id %>" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
+          <li class="active"><a href="#home-<%= portfolio.id %>" data-toggle="tab"><i class="icon-home"></i>&nbsp;</a></li>
           <li><a href="#gems-<%= portfolio.id %>" data-toggle="tab">Tools</a></li>
         </ul>
       </div>
@@ -38,15 +38,15 @@
         <!-- tab 2-->
         <div class="tab-pane active" id="home-<%= portfolio.id %>">
           <div class="thumbnail">
-            <a href="#" id="<%= portfolio.id %>" class="show-gallery">
+            <a href="#" data-gallery="<%= "#{portfolio.id}" %>" class="show-gallery">
               <div class="show-more">show more</div>
             </a>
             <img alt="<%= portfolio.id %>" src="site/public/images/<%= portfolio.id %>/thumb.png">
           </div>
           <div class="info">
-            <h5><a href="#" class="show-gallery"><%= portfolio.name %></a></h5>
+            <h5><a href="#" data-gallery="<%= "#{portfolio.id}" %>" class="show-gallery"><%= portfolio.name %></a></h5>
 
-            <p><%= portfolio.description %></p>
+            <p class="description"><%= portfolio.description %></p>
             <strong>Tools:</strong>
             <ul class="unstyled">
               <% portfolio.gems[0..3].try(:each) do |gem| %>
